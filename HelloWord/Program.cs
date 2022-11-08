@@ -41,17 +41,39 @@ namespace HelloWorld
 
             texto = "\n\n\nObrigado por ler até aqui :)";
             Console.Write("\n\n\nMas vamos falar sobre você agora!!!!") ;
-            Console.Write("\nQual o seu nome?\n");
+            Console.Write("\n\nQual o seu nome?\n");
             nomeAmigo = Console.ReadLine();
+            Console.Write("\nQual a sua idade?\n");
+            int idadeAmigo = int.Parse(Console.ReadLine());
 
-            Console.Write("\nOlá " + nomeAmigo + " Tudo bem com você?");
+            if(idadeAmigo > idade)
+            {
+                Console.Write("\nOlá " + nomeAmigo + " Tudo bem com você?");
+                Console.WriteLine("\nVocê é mais velho que eu!!!");
+            } else if(idadeAmigo < idade)
+            {
+                Console.Write("\nOlá " + nomeAmigo + " Tudo bem com você?");
+                Console.WriteLine("\nVocê é mais novo que eu!!!");
+
+            } else
+            {
+                Console.Write("\nOlá " + nomeAmigo + " Tudo bem com você?");
+                Console.WriteLine("\nTemos a mesma idade!!!");
+            }
+
+            
+
+
             Console.WriteLine("\n\nPara qual time voce torce?");
             String timeAmigo = Console.ReadLine();
 
-            if(timeAmigo != "Flamengo")
+            if(timeAmigo != "Flamengo" && timeAmigo != "Vasco")
             {
                 Console.WriteLine("\nVocê torce para o time errado!!!!");
-            }else
+            }else if (timeAmigo == "Vasco")
+            {
+                Console.WriteLine("\nVocê deve sofrer muito com seu time, forças guerreiro...");
+            } else
             {
                 Console.WriteLine("\nVocê é uma pessoa de sorte, bem vindo a vida de vencedor!!!");
             }
