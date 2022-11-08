@@ -20,6 +20,7 @@ namespace HelloWorld
             var curso = "Connect Biopark";
             texto = "Tudo bem?";
             dynamic corFavorita = "red";
+            int numeroTacasFlamengo = 3 + 8;
 
 
             Console.WriteLine("Hello World  ");
@@ -33,13 +34,27 @@ namespace HelloWorld
             Console.WriteLine("Cor Favorita: " + corFavorita);
             corFavorita = 4;
             Console.WriteLine("Pra falar a verdade possuo umas: " + corFavorita + " cores favoritas :D");
+            Console.WriteLine("Sou Flamenguista maluco e meu time tem: " + numeroTacasFlamengo + 
+                " titulos, contando apenas Copa do Brasil e Libertadores :D");
+            Console.WriteLine("Mas se for contar os outros trofeus deve dar uns "  + 
+                numeroTacasFlamengo * 5 + " ou mais hahahaha ");
 
             texto = "\n\n\nObrigado por ler até aqui :)";
             Console.Write("\n\n\nMas vamos falar sobre você agora!!!!") ;
             Console.Write("\nQual o seu nome?\n");
             nomeAmigo = Console.ReadLine();
 
-            Console.Write("Olá " + nomeAmigo + " Tudo bem com você?");
+            Console.Write("\nOlá " + nomeAmigo + " Tudo bem com você?");
+            Console.WriteLine("\n\nPara qual time voce torce?");
+            String timeAmigo = Console.ReadLine();
+
+            if(timeAmigo != "Flamengo")
+            {
+                Console.WriteLine("\nVocê torce para o time errado!!!!");
+            }else
+            {
+                Console.WriteLine("\nVocê é uma pessoa de sorte, bem vindo a vida de vencedor!!!");
+            }
             Console.WriteLine(texto);
             Console.ReadLine();
         }
