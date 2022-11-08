@@ -11,7 +11,8 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-            String texto;
+            String texto, nomeAmigo;
+            const String nome= "Edvaldo";
             int idade = 22;
             float altura = 1.89f;
             bool fazAcademia = true;
@@ -22,7 +23,7 @@ namespace HelloWorld
 
 
             Console.WriteLine("Hello World  ");
-            Console.WriteLine("\nMeu nome é Edvaldo :) ");
+            Console.WriteLine("\nMeu nome é " + nome + " :) ");
             Console.WriteLine(texto);
             Console.WriteLine("Eu tenho " + idade + " anos");
             Console.WriteLine("Tenho " + altura + " de altura");
@@ -34,9 +35,13 @@ namespace HelloWorld
             Console.WriteLine("Pra falar a verdade possuo umas: " + corFavorita + " cores favoritas :D");
 
             texto = "\n\n\nObrigado por ler até aqui :)";
+            Console.Write("\n\n\nMas vamos falar sobre você agora!!!!") ;
+            Console.Write("\nQual o seu nome?\n");
+            nomeAmigo = Console.ReadLine();
+
+            Console.Write("Olá " + nomeAmigo + " Tudo bem com você?");
             Console.WriteLine(texto);
             Console.ReadLine();
-
         }
     }
 }
