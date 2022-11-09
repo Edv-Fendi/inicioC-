@@ -11,7 +11,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             string[] times = new string[3] { "Flamengo", "Real Madrid", "Brasil" };
-            string texto, nomeAmigo;
+            string texto, nomeAmigo, torcer="";
             const string nome = "Edvaldo";
             int idade = 22, preco = 0;
             float altura = 1.89f;
@@ -45,20 +45,21 @@ namespace HelloWorld
             nomeAmigo = Console.ReadLine();
             Console.Write("\nQual a sua idade?\n");
             int idadeAmigo = int.Parse(Console.ReadLine());
-            mostrarIdade(idade, idadeAmigo, nomeAmigo);
+            MostrarIdade(idade, idadeAmigo, nomeAmigo);
 
             Console.WriteLine("\nPara qual time voce torce?");
             string timeAmigo = Console.ReadLine();
-            seuTime(timeAmigo);
-            gerarPreco(preco);
-            cadastrotimesFavoritos(times);
-            mostrarTimes(times);
+            SeuTime(timeAmigo);
+            PosicaoTime(torcer);
+            GerarPreco(preco);
+            CadastrotimesFavoritos(times);
+            MostrarTimes(times);
 
             Console.WriteLine(texto);
             Console.ReadLine();
         }
 
-        static void mostrarIdade(int idade, int idadeAmigo, string nomeAmigo) {
+        static void MostrarIdade(int idade, int idadeAmigo, string nomeAmigo) {
             if (idadeAmigo > idade)
             {
                 Console.Write($"\nOlá  {nomeAmigo}  Tudo bem com você?");
@@ -68,7 +69,6 @@ namespace HelloWorld
             {
                 Console.Write("\nOlá " + nomeAmigo + " Tudo bem com você?");
                 Console.WriteLine("\nVocê é mais novo que eu!!!");
-
             }
             else
             {
@@ -78,7 +78,7 @@ namespace HelloWorld
 
         }
 
-        static void seuTime(string timeAmigo)
+        static void SeuTime(string timeAmigo)
         {
 
             if (timeAmigo != "Flamengo" && timeAmigo != "Vasco")
@@ -95,7 +95,7 @@ namespace HelloWorld
             }
         }
 
-        static void gerarPreco(float preco)
+        static void GerarPreco(float preco)
         {
             Console.WriteLine("\nQual o preço médio do ingresso do seu time??");
             preco = int.Parse(Console.ReadLine());
@@ -110,7 +110,7 @@ namespace HelloWorld
             }
         }
 
-        static void cadastrotimesFavoritos(string[] times)
+        static void CadastrotimesFavoritos(string[] times)
         {
             Console.WriteLine("\nAgora vamos falar sobre seus três time favoritos!!!");
             for (int i = 0; i < 3; i++)
@@ -121,12 +121,30 @@ namespace HelloWorld
 
         }
 
-        static void mostrarTimes(string[] times)
+        static void MostrarTimes(string[] times)
         {
             Console.WriteLine("\n\nEntão estes são seus times favoritos:");
             for(int i = 0; i < times.Length; i++)
             {
                Console.WriteLine($"\n{times[i]}");
+            }
+        }
+
+        static void PosicaoTime(string estadio)
+        {
+            Console.WriteLine($"\nVoce ja foi assistir jogos do seu time no estadio??");
+            estadio = Console.ReadLine();
+            
+            switch (estadio)
+            {
+                case "sim":
+                        Console.WriteLine("\nUAUUUU, VOCÊ REALMENTE TORCE PARA SEU TIME!!!!!!");
+                        break;
+                    
+                case "nao":
+                    Console.WriteLine("\nVocê ainda vai ter essa oportunidade :(");
+                    break;
+                    
             }
         }
 
