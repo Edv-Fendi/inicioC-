@@ -8,8 +8,11 @@ namespace HelloWorld
 {
     internal class Program
     {
+
+        enum Cor {Vermelho, Preto}
         static void Main(string[] args)
         {
+            
             string[] times = new string[3] { "Flamengo", "Real Madrid", "Brasil" };
             string texto, nomeAmigo, torcer="";
             const string nome = "Edvaldo";
@@ -19,7 +22,7 @@ namespace HelloWorld
             var horaTrabalho = 4;
             var curso = "Connect Biopark";
             texto = "Tudo bem?";
-            dynamic corFavorita = "red";
+            Cor corFavorita = Cor.Vermelho;
             int numeroTacasFlamengo = 3 + 8;
 
 
@@ -32,8 +35,8 @@ namespace HelloWorld
             Console.WriteLine($"Curso: {curso}");
             Console.WriteLine($"Trabalho {horaTrabalho} horas por dia");
             Console.WriteLine("Cor Favorita: " + corFavorita);
-            corFavorita = 4;
-            Console.WriteLine($"Pra falar a verdade possuo umas: {corFavorita} cores favoritas :D");
+            
+            Console.WriteLine($"Pra falar a verdade possuo umas: {4} cores favoritas :D");
             Console.WriteLine($"Sou Flamenguista maluco e meu time tem: {numeroTacasFlamengo} " +
                 $"titulos, contando apenas Copa do Brasil e Libertadores :D");
             Console.WriteLine($"Mas se for contar os outros trofeus deve dar uns " +
@@ -144,6 +147,9 @@ namespace HelloWorld
                 case "nao":
                     Console.WriteLine("\nVocê ainda vai ter essa oportunidade :(");
                     break;
+                default:
+                    Console.WriteLine("\nNão entendi sua resposta :(");
+                break;
                     
             }
         }
