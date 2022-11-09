@@ -10,13 +10,14 @@ namespace HelloWorld
     {
 
         enum Cor {Vermelho, Preto}
+        enum Opcao { Sim = 1, Não}
         static void Main(string[] args)
         {
             
             string[] times = new string[3] { "Flamengo", "Real Madrid", "Brasil" };
-            string texto, nomeAmigo, torcer="";
+            string texto, nomeAmigo, torcer="" ;
             const string nome = "Edvaldo";
-            int idade = 22, preco = 0;
+            int idade = 22, preco = 0, trabalha = 0;
             float altura = 1.89f;
             bool fazAcademia = true;
             var horaTrabalho = 4;
@@ -35,7 +36,6 @@ namespace HelloWorld
             Console.WriteLine($"Curso: {curso}");
             Console.WriteLine($"Trabalho {horaTrabalho} horas por dia");
             Console.WriteLine("Cor Favorita: " + corFavorita);
-            
             Console.WriteLine($"Pra falar a verdade possuo umas: {4} cores favoritas :D");
             Console.WriteLine($"Sou Flamenguista maluco e meu time tem: {numeroTacasFlamengo} " +
                 $"titulos, contando apenas Copa do Brasil e Libertadores :D");
@@ -49,6 +49,10 @@ namespace HelloWorld
             Console.Write("\nQual a sua idade?\n");
             int idadeAmigo = int.Parse(Console.ReadLine());
             MostrarIdade(idade, idadeAmigo, nomeAmigo);
+            Console.Write("\n\nVoce trabalha?\n1- Sim\n2- Não\n");
+            int index= int.Parse(Console.ReadLine());
+            Trabalha(index);
+
 
             Console.WriteLine("\nPara qual time voce torce?");
             string timeAmigo = Console.ReadLine();
@@ -153,6 +157,25 @@ namespace HelloWorld
                     
             }
         }
+
+        static void Trabalha (int trabalha)
+        {
+            switch (trabalha)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("\nVoce trabalha, que maneiro");
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("\nPessoa de sorte, só curte a vida haahahaha");
+                        break;
+                    }
+            }
+        }
+
+
 
 
 
