@@ -181,8 +181,10 @@ namespace HelloWorld
 
             Console.WriteLine("\n\nVamos relembrar a epoca da copa? Aquele jogo que foi bem assim:\n");
             int contador = 0;
-            while (contador != 8)
+
+            do 
             {
+                
                 while (equipe != 7)
                 {
                     Console.WriteLine("Gooooool do brasil, do menino NEYYYYYMAR");
@@ -197,13 +199,13 @@ namespace HelloWorld
                     
 
                 }
-            }
+            } while (contador < 8);
             Console.WriteLine("\nFim do jogo: Brasil 7 x 1 Alemanha\n");
+        } 
+
+
+
+
+
         }
-
-
-
-
-
-    }
 }
