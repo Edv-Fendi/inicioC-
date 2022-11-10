@@ -17,7 +17,7 @@ namespace HelloWorld
             string[] times = new string[3] { "Flamengo", "Real Madrid", "Brasil" };
             string texto, nomeAmigo, torcer="" ;
             const string nome = "Edvaldo";
-            int idade = 22, preco = 0, trabalha = 0;
+            int idade = 22, preco = 0, equipe = 0;
             float altura = 1.89f;
             bool fazAcademia = true;
             var horaTrabalho = 4;
@@ -26,7 +26,7 @@ namespace HelloWorld
             Cor corFavorita = Cor.Vermelho;
             int numeroTacasFlamengo = 3 + 8;
 
-
+            
             Console.WriteLine("Hello World  ");
             Console.WriteLine($"\nMeu nome é {nome} :) ");
             Console.WriteLine(texto);
@@ -41,8 +41,8 @@ namespace HelloWorld
                 $"titulos, contando apenas Copa do Brasil e Libertadores :D");
             Console.WriteLine($"Mas se for contar os outros trofeus deve dar uns " +
                 $"{numeroTacasFlamengo * 5} ou mais hahahaha ");
-
             texto = "\n\n\nObrigado por ler até aqui :)";
+
             Console.Write("\n\n\nMas vamos falar sobre você agora!!!!");
             Console.Write("\n\nQual o seu nome?\n");
             nomeAmigo = Console.ReadLine();
@@ -61,6 +61,7 @@ namespace HelloWorld
             GerarPreco(preco);
             CadastrotimesFavoritos(times);
             MostrarTimes(times);
+            resultadoCopa(equipe);
 
             Console.WriteLine(texto);
             Console.ReadLine();
@@ -173,6 +174,31 @@ namespace HelloWorld
                         break;
                     }
             }
+        }
+
+        static void resultadoCopa(int equipe)
+        {
+
+            Console.WriteLine("\n\nVamos relembrar a epoca da copa? Aquele jogo que foi bem assim:\n");
+            int contador = 0;
+            while (contador != 8)
+            {
+                while (equipe != 7)
+                {
+                    Console.WriteLine("Gooooool do brasil, do menino NEYYYYYMAR");
+                    equipe++;
+                    contador++;
+                }
+
+                if(equipe == 7)
+                {
+                    Console.WriteLine("\nGol da Alemnha :X");
+                    contador++;
+                    
+
+                }
+            }
+            Console.WriteLine("\nFim do jogo: Brasil 7 x 1 Alemanha\n");
         }
 
 
