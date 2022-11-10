@@ -13,7 +13,7 @@ namespace HelloWorld
         enum Opcao { Sim = 1, Não}
         static void Main(string[] args)
         {
-            
+            string[] jogadoresFavoritos = new string[4] { "Gabigol", "Arrascaeta", "Pedro", "Neymar" };
             string[] times = new string[3] { "Flamengo", "Real Madrid", "Brasil" };
             string texto, nomeAmigo, torcer="" ;
             const string nome = "Edvaldo";
@@ -41,7 +41,7 @@ namespace HelloWorld
                 $"titulos, contando apenas Copa do Brasil e Libertadores :D");
             Console.WriteLine($"Mas se for contar os outros trofeus deve dar uns " +
                 $"{numeroTacasFlamengo * 5} ou mais hahahaha ");
-            texto = "\n\n\nObrigado por ler até aqui :)";
+            
 
             Console.Write("\n\n\nMas vamos falar sobre você agora!!!!");
             Console.Write("\n\nQual o seu nome?\n");
@@ -61,8 +61,10 @@ namespace HelloWorld
             GerarPreco(preco);
             CadastrotimesFavoritos(times);
             MostrarTimes(times);
+            jogadoresFav(jogadoresFavoritos);
+            
             resultadoCopa(equipe);
-
+            texto = "\n\n\nObrigado por ler até aqui meu programa de teste :)";
             Console.WriteLine(texto);
             Console.ReadLine();
         }
@@ -201,11 +203,21 @@ namespace HelloWorld
                 }
             } while (contador < 8);
             Console.WriteLine("\nFim do jogo: Brasil 7 x 1 Alemanha\n");
-        } 
-
-
-
-
-
         }
+
+
+        static void jogadoresFav(string[] equipe)
+        {
+            Console.WriteLine("Estes são meus jogadores favoritos: \n");
+            foreach (string jogadores in equipe)
+            {
+                Console.WriteLine($"\n{jogadores}");
+            }
+        }
+
+
+
+
+
+    }
 }
